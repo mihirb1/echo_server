@@ -33,7 +33,7 @@ sending: echo bye
 received: quit
 request handler shutting down
 
-# Implement MathHandler class
+## Implement MathHandler class
 Implement a math handler extending the request handler able to execute commands of the form:
 
 command ::= operator num num etc.
@@ -56,7 +56,7 @@ C:\Users\000030278\Desktop\bin>java echo.SimpleClient
 -> quit
 bye
 
-#Implement and test ProxyHandler & ProxyServer
+## Implement and test ProxyHandler & ProxyServer
 When a cache proxy receives a request, it looks in its cache to see if this request was made before. If so, it returns the cached response. If not, if forwards the request to its peer. When it receives a response back from the peer, it updates its cache before forwarding the response to the client.
 
 To test, you will need to type the following commands into three different command windows:
@@ -67,7 +67,7 @@ java echo.ProxyServer echo.ProxyHandler 5555 6666
 
 java echo.SimpleClient 6666
 
-#Implement a security proxy
+## Implement a security proxy
 
 A security proxy maintains a user table of the form:
 
