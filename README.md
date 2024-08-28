@@ -55,3 +55,35 @@ C:\Users\000030278\Desktop\bin>java echo.SimpleClient
 24.0
 -> quit
 bye
+
+#Implement and test ProxyHandler & ProxyServer
+When a cache proxy receives a request, it looks in its cache to see if this request was made before. If so, it returns the cached response. If not, if forwards the request to its peer. When it receives a response back from the peer, it updates its cache before forwarding the response to the client.
+
+To test, you will need to type the following commands into three different command windows:
+
+java echo. Server math.MathHandler
+
+java echo.ProxyServer echo.ProxyHandler 5555 6666
+
+java echo.SimpleClient 6666
+
+#Implement a security proxy
+A security proxy maintains a user table of the form:
+
+user  |  password
+-----------------
+jones |  abc
+smith |  xyz
+
+A client can create an entry in this table with the request:
+
+new user password
+
+The request handler creates an entry in the table (assuming the user name is unique) then terminates the session.
+
+To send a request to the server, a client must first log in with the request:
+
+login user password
+
+If the request handler is able to verify the login, all subsequent requests are forwarded to the peer. Otherwise the session is terminated.
+
