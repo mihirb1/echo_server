@@ -68,12 +68,14 @@ java echo.ProxyServer echo.ProxyHandler 5555 6666
 java echo.SimpleClient 6666
 
 #Implement a security proxy
+
 A security proxy maintains a user table of the form:
 
-user  |  password
------------------
-jones |  abc
-smith |  xyz
+user  password
+
+jones   abc
+
+smith   xyz
 
 A client can create an entry in this table with the request:
 
